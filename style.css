@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+img {
+   display: block;
+   cursor: pointer;
+}
+
+/* || VARIABLES */
+
+:root {
+   /* COLORS */
+   /* TEXT */
+   --PALE-VIOLET: hsl(276, 100%, 81%);
+   --MODERATE-VIOLET: hsl(276, 55%, 52%);
+   --DESATURATED-DARK-VIOLET: hsl(271, 15%, 43%);
+   --GRAYISH-BLUE: hsl(206, 6%, 79%);
+   --VERY-DARK-DESATURATED-VIOLET: hsl(271, 36%, 24%);
+   --DARK-GREYISH-VIOLET: hsl(270, 7%, 64%);
+   /* GRADIENTS */
+   --BG-GRADIENT: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+   --LIGHT-MAGENTA: hsl(293, 100%, 63%);
+   --LIGHT-VIOLET: hsl(264, 100%, 61%);
+   /* OTHER COLORS */
+   --WHITE: hsl(0, 0%, 100%);
+   --APP-BG: hsl(270, 20%, 96%);
+   --SUBMIT-BTN-BG: hsl(271, 36%, 24%);
+   --RADIO-BTN-OUTLINE: hsl(289, 100%, 72%);
+
+}
+
+body {
+   font-family: 'Rubik', sans-serif;
+   font-size: 1rem;
+   background-color: var(--APP-BG);
+   height: 100%;
+   min-width: 375px;
+   max-width: 1440px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 140px 0;
+}
+
+/* FIGURES */
+.arrow {
+   border: solid var(--WHITE);
+   border-width: 0 2px 2px 0;
+   display: inline-block;
+   padding: 3px;
+}
+
+.left {
+   transform: rotate(135deg);
+}
+
+.right {
+   transform: rotate(-45deg);
+}
+
+.circle {
+   width: 2px;
+   height: 2px;
+   background-color: var(--WHITE);
+   margin: 1px;
+   border-radius: 50%;
+}
+/* /////////// */
+
+.body__background {
+   background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+
+   border-bottom-left-radius: 260px;
+   border-bottom-right-radius: 260px;
+   width: 500px;
+   height: 700px;
+   position: absolute;
+   top: 0;
+   left: -80px;
+   z-index: -1;
+}
+
+/* || TEXT STYLE */
+h1 {
+   color: var(--VERY-DARK-DESATURATED-VIOLET);
+   font-size: 2.5rem;
+   font-weight: 500;
+}
+
+h2 {
+   font-size: 0.7rem;
+   font-weight: 500;
+   color: hsla(0, 0%, 100%, 0.808);
+}
+h3 {
+   font-size: 0.5rem;
+   color: var(--PALE-VIOLET);
+}
+
+p {
+   font-size: 0.5rem;
+   line-height: 1.5;
+   color: var(--MODERATE-VIOLET);
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 200px;
+}
+
+/* || HEADER APP */
+.main__app {
+   background-color: var(--WHITE);
+   border-radius: 30px;
+   box-shadow: 10px 10px 50px var(--DARK-GREYISH-VIOLET);
+   width: 250px;
+   height: 505px;
+   padding: 10px;
+   margin: 10px;
+}
+
+.app__container {
+   background-color: var(--APP-BG);
+   border-radius: 20px;
+   height: 100%;
+}
+
+.header__app-tocenter {
+   display: flex;
+   align-items: center;
+}
+
+.main__header {
+   background-image: linear-gradient(to left,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+   height: 65px;
+   position: relative;
+   border-radius: 20px 20px 7px 7px;
+   display: grid;
+   margin-bottom: 10px;
+   padding: 30px 15px 15px 15px;
+}
+
+.app__top {
+   background-color: var(--WHITE);
+   width: 132px;
+   height: 18px;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+}
+
+.hero {
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   border: 1px solid var(--WHITE);
+   margin: 0 10px 0 3px;
+}
+
+.points {
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+   align-items: flex-end;
+}
+
+
+/* || MESSAGES INSIDE APP */
+
+.message__left {
+   background-color: hsla(276, 100%, 81%, 0.233);
+   width: 128px;
+   border-radius: 8px 8px 8px 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0px 10px 8px 10px;
+   padding: 5px 10px;
+}
+
+.message__right {
+   color: var(--DESATURATED-DARK-VIOLET);
+   background-color: var(--WHITE);
+   border-radius: 8px 8px 4px 8px;
+   box-shadow: 3px 3px 10px var(--DARK-GREYISH-VIOLET);
+   width: 130px;
+   margin: 0 10px 10px 10px;
+   padding: 5px 10px;
+}
+
+.message__right-small {
+   width: 85px;
+   border-radius: 10px 10px 4px 10px;
+   padding: 6px 10px;
+}
+
+.img__container {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.dog-image {
+   width: 42px;
+   height: 42px;
+   margin: 10px 8px 10px 0;
+   border-radius: 10px;
+}
+
+.message__flex-toright {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+/* || PRICE */
+.price {
+   background-image: linear-gradient(to right,hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+   border-radius: 10px 9px 9px 4px;
+   width: 160px;
+   height: 32px;
+   margin: 8px 10px;
+   display: flex;
+   align-items: center;
+}
+
+.price__wheel {
+   border: 2px solid hsla(0, 0%, 100%, 0.219);
+   border-radius: 50%;
+   width: 14px;
+   height: 14px;
+   margin-inline: 8px;
+}
+
+.price__time {
+   color: rgba(255, 255, 255, 0.801);
+}
+
+.price__sum {
+   color: var(--WHITE);
+   font-size: 0.8rem;
+   font-weight: 500;
+   display: flex;
+   flex: 1 1 auto;
+   justify-content: flex-end;
+   margin-right: 18px;
+}
+
+/* || FORM */
+.app__form {
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+
+input {
+   height: 34px;
+   width: 210px;
+   border: none;
+   border-radius: 20px;
+   font-size: 0.7rem;
+   padding: 0 32px 0 20px;
+   margin-top: 7px;
+}
+
+input::placeholder {
+   color: rgba(128, 128, 128, 0.274);
+}
+
+.submit {
+   background-color: var(--SUBMIT-BTN-BG);
+   width: 26px;
+   height: 26px;
+   border-radius: 50%;
+   border: none;
+   position: absolute;
+   top: 4px;
+   right: 14px;
+   display: grid;
+   place-content: center;
+   padding-right: 3px;
+   cursor: pointer;
+}
+
+/* || ASIDE */
+
+aside {
+   width: 450px;
+   margin-left: 124px;
+}
+
+aside p {
+   color: var(--DARK-GREYISH-VIOLET);
+   font-size: 1rem;
+   line-height: 1.8;
+   margin-top: 25px;
+}
+
+/* || MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+   .body__background {
+      left: -150px;
+   }
+   body {
+      margin: 70px 0;
+   }
+   main {
+      flex-direction: column;
+      margin: 0;
+   }
+   aside {
+      text-align: center;
+      margin: 70px 0 0 0;
+      width: 305px;
+   }
+   
+   @media screen and (max-width: 600px) {
+      .body__background {
+         height: 500px;
+         left: -310px;
+      }
+   }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
